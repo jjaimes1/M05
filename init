@@ -1,0 +1,4 @@
+<target name="init">
+    <mkdir dir="classes" />
+    <mkdir dir="build" />
+</target>
