@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<project name="telematic" default="todo">
+
+
+	<target name="todo" depends="empaqueta, documenta">
+	</target>
+
+
+
+
+</project>
