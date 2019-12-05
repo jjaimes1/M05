@@ -1,0 +1,10 @@
+Classes d'equivalència:
+	* Array amb 1 element				-> false
+	* Array amb 2 elements no repetits	-> false
+	* Array amb 2 elements repetits		-> true
+	* Array amb 8 elements sense elements repetits -> false
+	* Array amb 8 elements repetits en poscions intermitges no consecutives -> true
+	* Array amb 8 elements repetits en poscions intermitges consecutives -> true
+	* Array amb 8 elements repetits en poscions intermitges consecutives i no consecutives -> true
+	* Array amb 8 elements repetits amb un d'ells a la posició 0 -> true
+	* Array amb 8 elements repetits amb un d'ells a l'última posició -> true

@@ -1,0 +1,8 @@
+Classes d'equivalència:
+	* Anys que són de traspàs
+		- anys que són múltiples de 400	-> true
+		- anys que són múltiples de 4 i no són múltiples de 100	-> true
+	* Anys que no són de traspàs:
+		- anys que no són múltiples de 400 i són múltiples de 4 i de 100	-> false
+		- anys que no són múltiples de 400 i no són múltiples de 4 i són múltiples de 100	-> false
+		- anys que no són múltiples ni de 400 ni de 4 ni de 100	-> false
