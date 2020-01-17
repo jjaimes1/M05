@@ -1,0 +1,40 @@
+namespace ejercicio6;
+
+class Persona
+{
+  String nom;
+  String dni;
+  String adreca;
+  0..1 -- 0..1 PersonaCasada;
+  0..1 -- 0..1 PersonaSoltera;
+}
+
+class PersonaCasada
+{
+  int tempsJunts;
+}
+class PersonaSoltera
+  {
+    boolean parrellaEstable;
+  }
+
+//$?[End_of_model]$?
+
+namespace -;
+
+class Persona
+{
+  position 50 30 109 45;
+  position.association Persona__PersonaCasada 24,88 23,0;
+  position.association Persona__PersonaSoltera 109,34 0,40;
+}
+
+class PersonaCasada
+{
+  position 52 157 118 56;
+}
+
+class PersonaSoltera
+{
+  position 325 25 166 56;
+}

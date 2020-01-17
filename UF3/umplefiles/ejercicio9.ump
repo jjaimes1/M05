@@ -1,0 +1,36 @@
+namespace agenciaDeViajes;
+
+
+class Viatge
+{
+  1 -- * autocar;
+}
+
+class autocar
+{
+  int numDeChofers
+}
+
+class excursio
+{
+  
+}
+//$?[End_of_model]$?
+
+namespace -;
+
+
+class autocar
+{
+  position 50 130 109 45;
+}
+
+class excursio
+{
+  position 50 230 109 45;
+}
+
+class Viatge
+{
+  position 50 30 109 45;
+}

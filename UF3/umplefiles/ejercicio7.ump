@@ -1,0 +1,24 @@
+class Persona  
+{
+  int telefon;
+}
+
+class CiutatsViscudes
+{
+    String nom;
+  1..* -- 1 Persona;
+}
+//$?[End_of_model]$?
+
+namespace -;
+
+
+class Persona
+{
+  position 50 30 109 45;
+}
+
+class CiutatsViscudes
+{
+  position 50 130 109 45;
+}

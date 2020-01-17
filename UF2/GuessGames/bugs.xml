@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.1" sequence="0" timestamp="1357559345000" analysisTimestamp="1357563686262" release="">
+  <Project projectName="Find Bugs">
+    <Jar>/media/monica/insti/dam/damM05/workspace/GuessGamesFindBugs/bin</Jar>
+    <SrcDir>/media/monica/insti/dam/damM05/workspace/GuessGamesFindBugs/src</SrcDir>
+  </Project>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE">
+    <Class classname="guessgames.Controller">
+      <SourceLine classname="guessgames.Controller" sourcefile="Controller.java" sourcepath="guessgames/Controller.java"/>
+    </Class>
+    <Method classname="guessgames.Controller" name="play" signature="()V" isStatic="false">
+      <SourceLine classname="guessgames.Controller" start="45" end="85" startBytecode="0" endBytecode="474" sourcefile="Controller.java" sourcepath="guessgames/Controller.java"/>
+    </Method>
+    <SourceLine classname="guessgames.Controller" start="54" end="59" startBytecode="62" endBytecode="102" sourcefile="Controller.java" sourcepath="guessgames/Controller.java"/>
+  </BugInstance>
+  <BugInstance type="DM_NEXTINT_VIA_NEXTDOUBLE" priority="2" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="guessgames.Hangman">
+      <SourceLine classname="guessgames.Hangman" sourcefile="Hangman.java" sourcepath="guessgames/Hangman.java"/>
+    </Class>
+    <Method classname="guessgames.Hangman" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="guessgames.Hangman" start="46" end="53" startBytecode="0" endBytecode="189" sourcefile="Hangman.java" sourcepath="guessgames/Hangman.java"/>
+    </Method>
+    <SourceLine classname="guessgames.Hangman" start="47" end="47" startBytecode="15" endBytecode="15" sourcefile="Hangman.java" sourcepath="guessgames/Hangman.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="guessgames.TUI">
+      <SourceLine classname="guessgames.TUI" sourcefile="TUI.java" sourcepath="guessgames/TUI.java"/>
+    </Class>
+    <Method classname="guessgames.TUI" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="guessgames.TUI" start="39" end="44" startBytecode="0" endBytecode="106" sourcefile="TUI.java" sourcepath="guessgames/TUI.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="608" end="609" startBytecode="0" endBytecode="71" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+    </Method>
+    <SourceLine classname="guessgames.TUI" start="40" end="40" startBytecode="12" endBytecode="12" sourcefile="TUI.java" sourcepath="guessgames/TUI.java"/>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" abbrev="FS" category="BAD_PRACTICE">
+    <Class classname="guessgames.TUI">
+      <SourceLine classname="guessgames.TUI" sourcefile="TUI.java" sourcepath="guessgames/TUI.java"/>
+    </Class>
+    <Method classname="guessgames.TUI" name="printWin" signature="()V" isStatic="false">
+      <SourceLine classname="guessgames.TUI" start="84" end="85" startBytecode="0" endBytecode="59" sourcefile="TUI.java" sourcepath="guessgames/TUI.java"/>
+    </Method>
+    <Method classname="java.io.PrintStream" name="printf" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.PrintStream" start="871" end="871" startBytecode="0" endBytecode="68" sourcefile="PrintStream.java" sourcepath="java/io/PrintStream.java"/>
+    </Method>
+    <String value="Molt b&#233;! Has guanyat! \\o/\n\n\n" role="STRING_FORMAT_STRING"/>
+    <SourceLine classname="guessgames.TUI" start="84" end="84" startBytecode="9" endBytecode="9" sourcefile="TUI.java" sourcepath="guessgames/TUI.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Mon, 7 Jan 2013 12:49:05 +0100" total_classes="5" referenced_classes="19" total_bugs="4" total_size="148" num_packages="1" vm_version="22.0-b10" cpu_seconds="14.53" clock_seconds="64.97" peak_mbytes="103.02" alloc_mbytes="682.69" gc_seconds="0.06" priority_2="3" priority_1="1">
+    <PackageStats package="guessgames" total_bugs="4" total_types="5" total_size="148" priority_2="3" priority_1="1">
+      <ClassStats class="guessgames.Controller" sourceFile="Controller.java" interface="false" size="36" bugs="1" priority_2="1"/>
+      <ClassStats class="guessgames.Game" sourceFile="Game.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="guessgames.GuessNumber" sourceFile="GuessNumber.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="guessgames.Hangman" sourceFile="Hangman.java" interface="false" size="32" bugs="1" priority_2="1"/>
+      <ClassStats class="guessgames.TUI" sourceFile="TUI.java" interface="false" size="45" bugs="2" priority_2="1" priority_1="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.FindBugs2" totalMilliseconds="491" invocations="2" avgMicrosecondsPerInvocation="245771" maxMicrosecondsPerInvocation="324240" standardDeviationMircosecondsPerInvocation="78467"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="395" invocations="347" avgMicrosecondsPerInvocation="1140" maxMicrosecondsPerInvocation="14930" standardDeviationMircosecondsPerInvocation="2014"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="185" invocations="19" avgMicrosecondsPerInvocation="9787" maxMicrosecondsPerInvocation="86848" standardDeviationMircosecondsPerInvocation="19265"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="185" invocations="19" avgMicrosecondsPerInvocation="9740" maxMicrosecondsPerInvocation="66182" standardDeviationMircosecondsPerInvocation="15354"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="124" invocations="19" avgMicrosecondsPerInvocation="6551" maxMicrosecondsPerInvocation="52359" standardDeviationMircosecondsPerInvocation="11596"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="68" invocations="338" avgMicrosecondsPerInvocation="203" maxMicrosecondsPerInvocation="2559" standardDeviationMircosecondsPerInvocation="356"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="62" invocations="25" avgMicrosecondsPerInvocation="2506" maxMicrosecondsPerInvocation="18478" standardDeviationMircosecondsPerInvocation="4307"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="62" invocations="25" avgMicrosecondsPerInvocation="2497" maxMicrosecondsPerInvocation="15571" standardDeviationMircosecondsPerInvocation="3643"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="58" invocations="90" avgMicrosecondsPerInvocation="654" maxMicrosecondsPerInvocation="3901" standardDeviationMircosecondsPerInvocation="719"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="54" invocations="25" avgMicrosecondsPerInvocation="2196" maxMicrosecondsPerInvocation="14893" standardDeviationMircosecondsPerInvocation="3493"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="53" invocations="350" avgMicrosecondsPerInvocation="152" maxMicrosecondsPerInvocation="496" standardDeviationMircosecondsPerInvocation="63"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="49" invocations="19" avgMicrosecondsPerInvocation="2624" maxMicrosecondsPerInvocation="11979" standardDeviationMircosecondsPerInvocation="3454"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="49" invocations="25" avgMicrosecondsPerInvocation="1965" maxMicrosecondsPerInvocation="11583" standardDeviationMircosecondsPerInvocation="3029"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="46" invocations="19" avgMicrosecondsPerInvocation="2454" maxMicrosecondsPerInvocation="21640" standardDeviationMircosecondsPerInvocation="4769"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="45" invocations="26" avgMicrosecondsPerInvocation="1750" maxMicrosecondsPerInvocation="22108" standardDeviationMircosecondsPerInvocation="4236"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="45" invocations="28" avgMicrosecondsPerInvocation="1615" maxMicrosecondsPerInvocation="40242" standardDeviationMircosecondsPerInvocation="7437"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.impl.ZipCodeBaseFactory" totalMilliseconds="41" invocations="15" avgMicrosecondsPerInvocation="2765" maxMicrosecondsPerInvocation="40805" standardDeviationMircosecondsPerInvocation="10166"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

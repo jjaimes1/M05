@@ -1,0 +1,23 @@
+class ma
+{
+  
+}
+class dit
+{
+  1..5 -- 1 ma;
+}
+//$?[End_of_model]$?
+
+namespace -;
+
+
+class ma
+{
+  position 50 30 109 45;
+}
+
+class dit
+{
+  position 50 130 109 45;
+  position.association dit__ma 46,0 46,40;
+}
